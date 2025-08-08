@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudnix - Onboarding</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+            <header class="header">
+            <div class="logo">
+                <i class="fas fa-cloud"></i>
+                <span>Cloudnix</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <span>Theme</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <span>Product</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <span>Pricing</span>
+                </div>
+            </div>
+        </header>
+
+                
+        <section class="step-content active" id="step1">
+            <div class="step-header">
+                <h1>Apply a Theme</h1>
+                <p>Select a theme that matches your brand and preferences</p>
+            </div>
+            
+            <div class="theme-grid">
+                <div class="theme-card" data-theme="bags">
+                    <div class="theme-image">
+                        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Bags Theme">
+                    </div>
+                    <div class="theme-content">
+                        <h3>Bags</h3>
+                        <p>Elegant and sophisticated design perfect for fashion and lifestyle brands</p>
+                        <div class="theme-features">
+                            <span class="feature-tag">Fashion</span>
+                            <span class="feature-tag">Luxury</span>
+                            <span class="feature-tag">Elegant</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="theme-card" data-theme="flex">
+                    <div class="theme-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Flex Theme">
+                    </div>
+                    <div class="theme-content">
+                        <h3>Flex</h3>
+                        <p>Modern and adaptable design for tech and business applications</p>
+                        <div class="theme-features">
+                            <span class="feature-tag">Modern</span>
+                            <span class="feature-tag">Tech</span>
+                            <span class="feature-tag">Adaptable</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="theme-card" data-theme="chic">
+                    <div class="theme-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Chic Theme">
+                    </div>
+                    <div class="theme-content">
+                        <h3>Chic</h3>
+                        <p>Stylish and contemporary design for creative and boutique businesses</p>
+                        <div class="theme-features">
+                            <span class="feature-tag">Stylish</span>
+                            <span class="feature-tag">Creative</span>
+                            <span class="feature-tag">Contemporary</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step-actions">
+                <button class="btn btn-primary" onclick="nextStep()">Continue</button>
+            </div>
+        </section>
+
+        <!-- Step 2: Product Configuration -->
+        <section class="step-content" id="step2">
+            <div class="step-header">
+                <h1>Configure Your Product</h1>
+                <p>Tell us about your product type and category</p>
+            </div>
+            
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="productType">Product Type</label>
+                    <select id="productType" class="form-control">
+                        <option value="">Select product type</option>
+                        <option value="saas">SaaS Application</option>
+                        <option value="ecommerce">E-commerce Platform</option>
+                        <option value="blog">Blog/Content Site</option>
+                        <option value="portfolio">Portfolio</option>
+                        <option value="landing">Landing Page</option>
+                        <option value="dashboard">Dashboard</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productCategory">Product Category</label>
+                    <select id="productCategory" class="form-control">
+                        <option value="">Select category</option>
+                        <option value="technology">Technology</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="finance">Finance</option>
+                        <option value="education">Education</option>
+                        <option value="retail">Retail</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" class="form-control" placeholder="Enter your product name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="productDescription">Brief Description</label>
+                    <textarea id="productDescription" class="form-control" rows="3" placeholder="Describe your product in a few words"></textarea>
+                </div>
+            </div>
+            
+            <div class="step-actions">
+                <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                <button class="btn btn-primary" onclick="nextStep()">Continue</button>
+            </div>
+        </section>
+
+        <!-- Step 3: Product Details -->
+        <section class="step-content" id="step3">
+            <div class="step-header">
+                <h1>Product Details</h1>
+                <p>Enter your product information and pricing details</p>
+            </div>
+            
+            <!-- Basic Details Section -->
+            <div class="details-section">
+                <h2 class="section-title">Basic Details</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <div class="input-box">
+                            <input type="text" id="productName" class="form-control" placeholder="e.g. Anatomy Book">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productDescription">Product Description</label>
+                        <div class="input-box">
+                            <textarea id="productDescription" class="form-control" rows="3" placeholder="Describe your product in detail"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productImage">Add Image</label>
+                        <div class="image-upload-box">
+                            <input type="file" id="productImage" class="file-input" accept="image/*">
+                            <div class="upload-placeholder">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload image</p>
+                                <span>or drag and drop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pricing Details Section -->
+            <div class="details-section">
+                <h2 class="section-title">Pricing Details</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-item">
+                        <label for="netPrice">Net Price</label>
+                        <div class="price-box">
+                            <span class="currency">₹</span>
+                            <input type="number" id="netPrice" class="price-input" placeholder="80">
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-item">
+                        <label for="listPrice">List Price</label>
+                        <div class="price-box">
+                            <span class="currency">₹</span>
+                            <input type="number" id="listPrice" class="price-input" placeholder="100">
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-item">
+                        <label for="discountPercentage">Discount Percentage</label>
+                        <div class="price-box">
+                            <input type="number" id="discountPercentage" class="price-input" placeholder="40">
+                            <span class="unit">%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-item">
+                        <label for="gstRatio">GST Ratio</label>
+                        <div class="price-box">
+                            <input type="number" id="gstRatio" class="price-input" placeholder="20">
+                            <span class="unit">%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-item">
+                        <label for="shippingCharge">Shipping Charge (if any)</label>
+                        <div class="price-box">
+                            <span class="currency">₹</span>
+                            <input type="number" id="shippingCharge" class="price-input" placeholder="40">
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-item">
+                        <label for="stockLevel">Stock Level</label>
+                        <div class="price-box">
+                            <input type="number" id="stockLevel" class="price-input" placeholder="110">
+                            <span class="unit">units</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step-actions">
+                <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                <button class="btn btn-primary" onclick="completeOnboarding()">Complete Setup</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
